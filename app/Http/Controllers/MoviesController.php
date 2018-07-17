@@ -28,6 +28,7 @@ class MoviesController extends Controller
 
     public function store()
     {
+        
         $this->validate(request(), [
             'title' => 'required', 
             'genre' => 'required', 
@@ -35,7 +36,7 @@ class MoviesController extends Controller
             'production_year' => 'required|min:1900|max:2018',
             'storyline' => 'required|max:1000'
             ]);
-
+            dd(request()->all());
         Movie::create([
             'title' => request('title'),
             'genre' => request('genre'),
@@ -46,3 +47,4 @@ class MoviesController extends Controller
         return redirect('/movies');
     }
 }
+

@@ -1,7 +1,11 @@
 @extends('layouts.master')
 @extends('layouts.navbar')
 @section('content')
-
+@if(!empty($errors->all()))
+   @foreach ($errors->all() as $error)
+      <div>{{ $error }}</div>
+  @endforeach
+@endif
 <div style='width: 70%; margin: 0 auto;'>
     <form action='/movies' method='POST' >
 
