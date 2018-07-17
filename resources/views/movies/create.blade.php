@@ -1,26 +1,42 @@
 @extends('layouts.master')
 @extends('layouts.navbar')
 @section('content')
-    <form action='/posts' method='POST'>
+
+<div style='width: 70%; margin: 0 auto;'>
+    <form action='/movies' method='POST' >
 
         {{ csrf_field() }}
 
-        <div class="form-group">
+        <div class="form-group" >
             <label for="title">Title</label>
             <input name="title" type="text" class="form-control" id="title">
             @include('partials.error-message', ['fieldName' => 'title'])
         </div>
         <div class="form-group">
-            <label for="body">Body</label>
-            <textarea name="body" class="form-control" id="body"></textarea>
-            @include('partials.error-message', ['fieldName' => 'body'])
+            <label for="genre">Genre</label>
+            <input name="genre" class="form-control" id="genre">
+            @include('partials.error-message', ['fieldName' => 'genre'])
             
         </div>
+        <div class="form-group">
+            <label for="director">Director</label>
+            <input name="director" class="form-control" id="director">
             
-        <div class="form-group form-check">
-            <input name="published" value='1' type="checkbox" class="form-check-input" id="published">
-            <label class="form-check-label" for="published">Publish</label>
+            
+        </div>  
+        <div class="form-group">
+            <label for="production_year">Production year</label>
+            <input name="production_year" class="form-control" id="production_year">
+           
+            
+        </div>
+        <div class="form-group">
+            <label for="storyline">Storyline</label>
+            <input name="storyline" class="form-control" id="storyline">
+            
+            
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+</div>
 @endsection
