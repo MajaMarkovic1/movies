@@ -1,5 +1,6 @@
 <?php
-
+use App\Comment;
+use App\Movie;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,3 +20,8 @@ Route::get('/movies', 'MoviesController@index');
 Route::get('/movies/{id}', 'MoviesController@show');
 Route::get('/create', 'MoviesController@create');
 Route::post('/movies', 'MoviesController@store');
+Route::post('/movies/{id}', 'CommentController@store');
+
+
+
+

@@ -14,4 +14,10 @@ class Movie extends Model
     {
         return self::orderBy('title', 'asc')->take(5)->get();
     }
+
+    public function comment()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
 }
