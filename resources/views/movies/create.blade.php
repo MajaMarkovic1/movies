@@ -8,7 +8,7 @@
   @endforeach
 @endif -->
 
-    <div style='width: 50%; margin: 0 auto;'>
+    <div style='width: 40%; margin: 0 auto;'>
         <form action='movies' method='POST' >
 
             {{ csrf_field() }}

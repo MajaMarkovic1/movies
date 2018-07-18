@@ -5,7 +5,7 @@
     <div style='width: 90%; margin: 0 auto;'>
         
         <h1> {{ $movie->title }}</h1>
-        <div><strong>Genre:</strong> {{$movie->genre}}</div>
+        <div><a href="../genres/{{$movie->genre}}"><strong>Genre:</strong></a> {{$movie->genre}}</div>
         <div><strong>Director:</strong> {{$movie->director}}</div>
         <div><strong>Production year:</strong> {{$movie->production_year}}</div>
         <div><strong>Storyline:</strong><p> {{$movie->storyline}}</p></div><br>
