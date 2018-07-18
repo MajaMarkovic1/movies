@@ -7,11 +7,9 @@ use Illuminate\Http\Request;
 
 class MoviesController extends Controller
 {
-    //
     public function index()
     {
-        $movies = Movie::all();
-        
+        $movies = Movie::published();
         return view('movies.index', compact('movies'));
     }
 
@@ -28,15 +26,14 @@ class MoviesController extends Controller
 
     public function store()
     {
-        
         $this->validate(request(), [
             'title' => 'required', 
             'genre' => 'required', 
-            'director' => 'required',
-            'production_year' => 'required|min:1900|max:2018',
+            //'director' => 'required',
+            'production_year' => 'required|integer|between:1900,2018',
             'storyline' => 'required|max:1000'
             ]);
-            dd(request()->all());
+            //dd(request()->all());
         Movie::create([
             'title' => request('title'),
             'genre' => request('genre'),
@@ -44,7 +41,9 @@ class MoviesController extends Controller
             'production_year' => request('production_year'),
             'storyline' => request('storyline')
         ]);
-        return redirect('/movies');
+        return redirect('movies');
     }
 }
+
+
 

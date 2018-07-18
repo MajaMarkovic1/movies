@@ -1,7 +1,5 @@
 @if($errors->has($fieldName))
-    <ul>
         @foreach($errors->get($fieldName) as $error)
-            <li class='btn btn-warning'>{{ $error }}</li>
+            <div class='alert alert-warning'>{{ $error }}</div>
         @endforeach
-    </ul>
 @endif
