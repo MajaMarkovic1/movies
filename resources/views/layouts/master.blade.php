@@ -6,8 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel='stylesheet' href='css/movies.css'>
 </head>
 <body>
-    @yield('content')
+    @include('layouts.navbar')
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 blog-main">
+                @yield('content')
+            </div><!-- /.blog-main -->
+            @yield('sidebar')
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+
 </body>
 </html>

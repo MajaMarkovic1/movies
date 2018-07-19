@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@extends('layouts.navbar')
+
 @section('content')
 
     <div style='width: 90%; margin: 0 auto; box-sizing: border-box;'>
@@ -8,6 +8,12 @@
             <div >{{ $movie->storyline }}</div><br>
         @endforeach
     </div>
+
+@endsection
+
+@section('sidebar')
+
+    @include('layouts.sidebar')
 
 @endsection
 

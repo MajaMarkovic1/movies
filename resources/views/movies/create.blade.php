@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@extends('layouts.navbar')
+
 @section('content')
 
 <!-- @if(!empty($errors->all()))
@@ -8,7 +8,7 @@
   @endforeach
 @endif -->
 
-    <div style='width: 40%; margin: 0 auto;'>
+    <div style='width: 90%; margin: 0 auto;'>
         <form action='movies' method='POST' >
 
             {{ csrf_field() }}
@@ -28,7 +28,6 @@
                 <label for="director">Director</label>
                 <input name="director" class="form-control" id="director">
                 @include('partials.error-message', ['fieldName' => 'director'])
-                
             </div>  
             <div class="form-group">
                 <label for="production_year">Production year</label>

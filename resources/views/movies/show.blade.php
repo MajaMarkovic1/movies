@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@extends('layouts.navbar')
+
 @section('content')
 
     <div style='width: 90%; margin: 0 auto;'>
