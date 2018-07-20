@@ -3,8 +3,8 @@
     <div class="sidebar-module">
     <h4>Archives</h4>
     <ol class="list-unstyled">
-        @foreach ($movies as $movie)
-        <li><a style='color:grey;' href="{{ action('MoviesController@show', $movie) }}">{{ $movie->title }}</a></li>
+        @foreach ($latest_movies as $latest_movie)
+        <li><a style='color:grey;' href="/movies/{{$latest_movie->id}}">{{ $latest_movie->title }}</a></li>
         @endforeach
     </ol>
     </div>

@@ -12,7 +12,7 @@ class Movie extends Model
 
     protected function published()
     {
-        return self::orderBy('title', 'asc')->take(5)->get();
+        return self::orderBy('id', 'desc')->take(5)->get();
     }
 
     public function comment()

@@ -8,9 +8,11 @@ use Illuminate\Http\Request;
 
 class MoviesController extends Controller
 {
+
     public function index()
     {
         $movies = Movie::published();
+        
         return view('movies.index', compact('movies'));
     }
 
